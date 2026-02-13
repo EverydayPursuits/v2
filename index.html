@@ -1055,6 +1055,241 @@
         .sound-toggle:active {
             transform: scale(0.95);
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            /* Intro Section */
+            .dancing-cat {
+                width: 180px;
+                height: 180px;
+            }
+
+            .valentine-question {
+                font-size: 28px;
+                padding: 0 15px;
+            }
+
+            .valentine-subtext {
+                font-size: 18px;
+                padding: 0 15px;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .yes-btn, .no-btn {
+                width: 200px;
+                padding: 18px 40px;
+                font-size: 20px;
+            }
+
+            /* Gifts Section */
+            .gifts-title {
+                font-size: 32px;
+            }
+
+            .gifts-subtitle {
+                font-size: 18px;
+            }
+
+            .gifts-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 0 10px;
+            }
+
+            .gift-card {
+                padding: 20px;
+            }
+
+            .gift-icon {
+                font-size: 40px;
+            }
+
+            /* Memories Section */
+            .memories-title {
+                font-size: 28px;
+            }
+
+            .memory-item {
+                flex-direction: column !important;
+                gap: 15px;
+            }
+
+            .memory-photo {
+                width: 100%;
+                max-width: 280px;
+                transform: rotate(0deg) !important;
+            }
+
+            .memory-text {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            /* Flowers Section */
+            .flowers-options {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .flower-btn {
+                font-size: 15px;
+                padding: 12px 25px;
+            }
+
+            .flower-display {
+                font-size: 150px;
+            }
+
+            /* Song Section */
+            .song-title {
+                font-size: 28px;
+            }
+
+            .video-container {
+                padding: 25px 20px !important;
+                max-width: 90% !important;
+                margin: 0 auto;
+            }
+
+            /* Letter Section */
+            .letter-title {
+                font-size: 28px;
+            }
+
+            .letter-photo {
+                width: 150px;
+                height: 100px;
+            }
+
+            .countdown-container {
+                padding: 20px;
+                margin: 0 10px 30px 10px;
+            }
+
+            .countdown-title {
+                font-size: 18px;
+            }
+
+            .countdown-numbers {
+                font-size: 36px;
+            }
+
+            .letter-content {
+                padding: 25px;
+                font-size: 16px;
+                margin: 0 10px 30px 10px;
+            }
+
+            .interactive-box {
+                font-size: 16px;
+                padding: 20px;
+                margin: 0 10px 30px 10px;
+            }
+
+            .photos-section-title {
+                font-size: 24px;
+            }
+
+            .photos-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 0 10px;
+            }
+
+            .photo-item {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1;
+            }
+
+            /* Timeline Section */
+            .timeline-title {
+                font-size: 28px;
+            }
+
+            .timeline-subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 50px;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .timeline-content {
+                width: 100%;
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .timeline-dot {
+                left: 20px !important;
+            }
+
+            /* Sound Toggle */
+            .sound-toggle {
+                width: 50px;
+                height: 50px;
+                font-size: 22px;
+                top: 15px;
+                right: 15px;
+            }
+
+            /* Love Notes - smaller on mobile */
+            .love-note {
+                font-size: 24px;
+            }
+
+            .love-message {
+                max-width: 90%;
+                padding: 30px 20px;
+                font-size: 18px;
+            }
+
+            /* Back buttons */
+            .btn, .back-btn {
+                font-size: 18px;
+                padding: 15px 35px;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .valentine-question {
+                font-size: 24px;
+            }
+
+            .gifts-grid {
+                grid-template-columns: 1fr;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .letter-content {
+                padding: 20px;
+                font-size: 15px;
+            }
+
+            .photos-grid {
+                grid-template-columns: 1fr;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1186,8 +1421,8 @@
                 <source src="song.m4a" type="audio/mp4">
             </audio>
             
-            <div id="audioStatus" style="font-size: 12px; text-align: center; margin-top: 5px; color: rgba(255,255,255,0.7); min-height: 18px;">
-                Loading...
+            <div id="audioStatus" style="display: none;">
+                <!-- Hidden status -->
             </div>
             
             <div style="font-size: 14px; opacity: 0.9; text-align: center; margin-top: 8px; color: white;">
